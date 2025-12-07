@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    env_file:
+      - .env
+    network_mode: host
+    # infinite command
+    # entrypoint: tail -f /dev/null
