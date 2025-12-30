@@ -20,7 +20,6 @@ Set the following environment variables (see `docker-compose.yml` for example):
 - `MQTT_USER`: MQTT username
 - `MQTT_PASSWORD`: MQTT password
 - `LOG_LEVEL`: (Optional) Log level (`trace`, `debug`, `info`, `warn`, `error`)
-- `PORT`: (Optional) HTTP server port (default: 8080)
 
 ## Usage
 ### Docker Compose

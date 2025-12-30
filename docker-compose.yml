@@ -9,7 +9,5 @@ services:
       - MQTT_PASSWORD=your_mqtt_password        # MQTT password
       # Optional
       - LOG_LEVEL=info                          # Log level (trace, debug, info, warn, error)
-      - PORT=8080                               # HTTP server port
-    ports:
-      - "8080:8080"
+    network_mode: host
     restart: unless-stopped
