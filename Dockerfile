@@ -17,8 +17,8 @@ RUN apt-get update && \
     apt-get install -y libssl3 && \
     rm -rf /var/lib/apt/lists/*
 
-COPY --from=build /app/target/release/sonos-rs /usr/local/bin/sonos-rs
+COPY --from=build /app/target/release/sonos-awtrix-rs /usr/local/bin/sonos-awtrix-rs
 
-RUN chmod +x /usr/local/bin/sonos-rs
+RUN chmod +x /usr/local/bin/sonos-awtrix-rs
 
-ENTRYPOINT ["/usr/local/bin/sonos-rs"]
+ENTRYPOINT ["/usr/local/bin/sonos-awtrix-rs"]
