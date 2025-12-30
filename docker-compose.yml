@@ -1,8 +1,15 @@
 services:
   app:
-    build: .
-    env_file:
-      - .env
-    network_mode: host
-    # infinite command
-    # entrypoint: tail -f /dev/null
+    image: ghcr.io/jeufore/sonos-awtrix-rs:latest
+    environment:
+      # Required
+      - ROOM_NAME=Living Room Speaker           # Sonos speaker room name
+      - MQTT_HOST=mqtt://mqtt.example.com:1883  # MQTT broker URL
+      - MQTT_USER=your_mqtt_username            # MQTT username
+      - MQTT_PASSWORD=your_mqtt_password        # MQTT password
+      # Optional
+      - LOG_LEVEL=info                          # Log level (trace, debug, info, warn, error)
+      - PORT=8080                               # HTTP server port
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
