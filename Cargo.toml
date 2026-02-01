@@ -10,6 +10,6 @@ futures = "0.3.31"
 log = "0.4.29"
 paho-mqtt = "0.13.3"
 serde = { version = "1.0.228", features = ["derive"] }
-serde_json = "1.0.148"
+serde_json = "1.0.149"
 sonor = "2.0.0"
 tokio = { version = "1", features = ["full"] }
